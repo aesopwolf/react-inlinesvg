@@ -281,6 +281,13 @@ export default class InlineSVG extends React.Component {
 
   render() {
     return this.props.wrapper({
+      /* eslint-disable */
+      height: this.props.height,
+      width: this.props.width,
+      viewBox: this.props.viewBox,
+      x: this.props.x,
+      y: this.props.y,
+      /* eslint-enable */
       style: this.props.style,
       className: this.getClassName(),
       dangerouslySetInnerHTML: this.state.loadedText ? {
